@@ -16,7 +16,8 @@ st.set_page_config(
 )
 
 # Stock list
-stocks = ["AAPL", "MSFT", "GOOGL", "AMZN"]
+stocks = ["AAPL","MSFT","GOOGL","AMZN","META","TSLA","NFLX","NVDA","INTC","AMD","BABA",
+          "ORCL","PYPL","ADBE","CRM","IBM","KO","PEP","DIS","UBER"]
 
 # Function to create sequences
 
@@ -146,7 +147,7 @@ st.title("📈 Stock Prediction Dashboard")
 # Sidebar
 st.sidebar.header("Settings")
 selected_stock = st.sidebar.selectbox("Select Stock", stocks)
-prediction_days = st.sidebar.slider("Days to Predict", 7, 90, 30)
+prediction_days = st.sidebar.slider("Days to Predict",1, 7, 90, 30)
 
 # Tabs
 tab1, tab2 = st.tabs(["Model Performance", "Future Prediction"])
